@@ -1,0 +1,9 @@
+services:
+  mp3proxy:
+    build: .
+    container_name: mp3proxy
+    ports:
+      - "8123:8080"
+    volumes:
+      - ./urls.db:/app/urls.db
+    restart: unless-stopped
